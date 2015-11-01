@@ -1,0 +1,62 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+  "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\HuyTaDuc\.m2\repository\mysql\mysql-connector-java\5.1.36\mysql-connector-java-5.1.36.jar" />
+	<context id="ecommerce" targetRuntime="Mybatis3">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/ecommerce" userId="root"
+			password="1234">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.hust.htd.persistence.model"
+			targetProject="src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.hust.htd.persistence.mapper"
+			targetProject="src\main\resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator targetPackage="com.hust.htd.persistence.mapper"
+			type="XMLMAPPER" targetProject="src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="brand" domainObjectName="Brand">
+		</table>
+		<table tableName="role" domainObjectName="Role">
+		</table>
+		<table tableName="user" domainObjectName="User">
+		</table>
+		<table tableName="category" domainObjectName="Category">
+		</table>
+		<table tableName="image" domainObjectName="Image">
+		</table>
+		<table tableName="anonymous" domainObjectName="Anonymous">
+		</table>
+		<table tableName="product" domainObjectName="Product">
+		</table>
+		<table tableName="product_image" domainObjectName="ProductImage">
+		</table>
+		<table tableName="subcategory" domainObjectName="SubCategory">
+		</table>
+		<table tableName="rate_snippet" domainObjectName="RateSnippet">
+		</table>
+		<table tableName="rate" domainObjectName="Rate">
+		</table>
+		<table tableName="comment" domainObjectName="Comment">
+		</table>
+		<table tableName="origin" domainObjectName="Origin">
+		</table>
+
+	</context>
+</generatorConfiguration>
