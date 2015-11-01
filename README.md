@@ -1,2 +1,2 @@
-# openshift
-OpenShift Clould
+# Spring Project
+Spring Project
